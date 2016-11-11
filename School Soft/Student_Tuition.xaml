@@ -1,0 +1,30 @@
+﻿<Window x:Class="School_Soft.Student_Tuition"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:School_Soft"
+        mc:Ignorable="d"
+        Title="Student_Tuition" Height="340" Width="530">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="75*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="109"/>
+        </Grid.RowDefinitions>
+        <StackPanel HorizontalAlignment="Left" Height="80" Margin="10,10,0,0" VerticalAlignment="Top" Width="502" Grid.ColumnSpan="2">
+            <Label x:Name="lblCourseTitle" Content="Course Title" HorizontalAlignment="Center" FontWeight="Bold"/>
+            <TextBox x:Name="tbxCourseName" Height="30" TextWrapping="Wrap"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="80" Margin="10,0,0,0" VerticalAlignment="Top" Width="502" Grid.Row="1" Grid.ColumnSpan="2">
+            <Label x:Name="lblTuition" Content="Tuition Status" HorizontalAlignment="Center" FontWeight="Bold"/>
+            <TextBox x:Name="tbxFees" Height="30" TextWrapping="Wrap"/>
+        </StackPanel>
+        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="10,69,0,0" Grid.Row="2" VerticalAlignment="Top" Width="80" Height="25" Click="btnLogout_Click" FontWeight="Bold"/>
+
+    </Grid>
+</Window>

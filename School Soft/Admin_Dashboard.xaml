@@ -1,0 +1,27 @@
+﻿<Window x:Class="School_Soft.Admin_Dashboard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:School_Soft"
+        mc:Ignorable="d"
+        Title="Admin Dashboard" Height="340" Width="530">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="25*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="34*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="btnCreateUser" Content="Create Student Account" HorizontalAlignment="Left" Margin="162,22,0,0" VerticalAlignment="Top" Width="200" Height="70" Click="button_Click" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnCreateCourse" Content="Create/Edit Courses" HorizontalAlignment="Left" Margin="162,16,0,0" VerticalAlignment="Top" Width="200" Height="70" FontWeight="Bold" Click="btnCourse_Click" Grid.Row="1" Grid.ColumnSpan="2"/>
+        
+        <Button x:Name="btnSearch" Content="Search Student Records" HorizontalAlignment="Left" Margin="162,17,0,0" VerticalAlignment="Top" Width="200" Height="70" FontWeight="Bold" Click="btnFees_Copy_Click" Grid.Row="2" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnLogout" Content="Log Out" HorizontalAlignment="Left" Margin="14.118,48,0,0" VerticalAlignment="Top" Width="80" Height="30" FontWeight="Bold" Click="btnLogout_Click" Grid.Row="2" Grid.Column="2"/>
+
+    </Grid>
+</Window>
