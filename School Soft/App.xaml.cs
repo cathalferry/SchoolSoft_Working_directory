@@ -13,5 +13,9 @@ namespace School_Soft
     /// </summary>
     public partial class App : Application
     {
+
+        
+        
     }
+ 
 }

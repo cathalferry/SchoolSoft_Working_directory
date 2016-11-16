@@ -24,9 +24,16 @@ namespace School_Soft
             InitializeComponent();
         }
 
-        private void btnLogout_Click(object sender, RoutedEventArgs e)
+   
+
+        private void btnfees_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void btnback_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
         }
     }
 }

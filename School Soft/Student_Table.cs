@@ -21,7 +21,9 @@ namespace School_Soft
         public string Address2 { get; set; }
         public Nullable<int> Contact { get; set; }
         public int Fee_Status { get; set; }
+        public string Course_ID { get; set; }
     
+        public virtual Course_Table Course_Table { get; set; }
         public virtual Login_Table Login_Table { get; set; }
     }
 }

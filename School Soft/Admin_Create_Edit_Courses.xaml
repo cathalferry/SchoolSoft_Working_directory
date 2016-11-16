@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:School_Soft"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen" WindowStyle="None"
         Title="Create/Edit Courses" Height="500" Width="550">
-    <Grid>
+    <Grid Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="33*"/>
             <ColumnDefinition Width="33*"/>
@@ -23,22 +24,34 @@
             <RowDefinition Height="100*"/>
             <RowDefinition Height="25*"/>
         </Grid.RowDefinitions>
-        <Button x:Name="btnBack" Content="Back" Margin="43,10,56,0" VerticalAlignment="Top" Height="25" Click="btnLogout_Click" FontWeight="Bold" Grid.Row="7" RenderTransformOrigin="0.66,0.498"/>
-        <TextBox x:Name="tbxCourseTitle" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="128,5,0,0" Grid.Row="1" Grid.ColumnSpan="3"/>
-        <TextBox x:Name="tbxCourseID" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="128,5,0,0" Grid.Row="2" Grid.ColumnSpan="3"/>
-        <TextBox x:Name="tbxClass1" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="128,5,0,0" Grid.Row="3" Grid.ColumnSpan="3"/>
-        <TextBox x:Name="tbxClass2" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="128,5,0,0" Grid.Row="4" Grid.ColumnSpan="3" TextChanged="tbxStudentID_Copy2_TextChanged"/>
-        <TextBox x:Name="tbxClass3" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="128,5,0,0" Grid.Row="5" Grid.ColumnSpan="3"/>
-        <Label x:Name="lblCourseTitle" Content="Course Title:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,4,0,0" FontWeight="Bold" Width="100" Height="26" Grid.Row="1"/>
-        <Label x:Name="lblCourseID" Content="Course ID:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,4,0,0" FontWeight="Bold" Width="100" Height="26" Grid.Row="2"/>
-        <Label x:Name="lblClass1" Content="Class 1:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,10,0,0" FontWeight="Bold" Width="100" Height="26" Grid.Row="3"/>
-        <Label x:Name="lblClass2" Content="Class 2:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,10,0,0" FontWeight="Bold" Width="100" Height="26" Grid.Row="4"/>
-        <Label x:Name="lblClass3" Content="Class 3:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,4,0,0" FontWeight="Bold" Width="100" Height="26" Grid.Row="5"/>
-        <Button x:Name="btnEdit" Content="Edit" Margin="51,10,0,0" VerticalAlignment="Top" Height="25" Click="btnLogout_Click" FontWeight="Bold" HorizontalAlignment="Left" Width="80" Grid.Row="7" Grid.Column="1"/>
-        <Button x:Name="btnAdd" Content="Add" Margin="60,10,0,0" VerticalAlignment="Top" Height="25" Click="btnLogout_Click" FontWeight="Bold" HorizontalAlignment="Left" Width="80" Grid.Row="7" Grid.Column="2"/>
-        <Label x:Name="lblInfoCourse" Content=" Create or Edit Course Details" VerticalAlignment="Top" FontWeight="Bold" Height="26" HorizontalAlignment="Left" Width="256" Grid.ColumnSpan="2" Grid.Column="1"/>
-        <TextBox x:Name="tbxCourseDetails" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="153" Margin="10,28,0,0" Grid.Row="6" TextWrapping="Wrap" VerticalAlignment="Top" Width="522" TextChanged="textBox_TextChanged"/>
-        <Label x:Name="lblAvailableCourses" Content="Available Courses:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,2,0,0" FontWeight="Bold" Width="126" Height="26" Grid.Row="6"/>
+        <Button x:Name="btnBack" Content="Back" Margin="43,10,56,0" VerticalAlignment="Top" Height="25" Click="btnBack_Click" FontWeight="Bold" Grid.Row="7" RenderTransformOrigin="0.66,0.498" FontSize="14.667">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <TextBox x:Name="tbxCourseTitle" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="128,5,0,0" Grid.Row="1" Grid.ColumnSpan="3" FontSize="14.667" BorderThickness="3"/>
+        <TextBox x:Name="tbxCourseID" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="128,5,0,0" Grid.Row="2" Grid.ColumnSpan="3" BorderThickness="3" FontSize="14.667"/>
+        <TextBox x:Name="tbxClass1" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="128,5,0,0" Grid.Row="3" Grid.ColumnSpan="3" FontSize="14.667" BorderThickness="3"/>
+        <TextBox x:Name="tbxClass2" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="128,5,0,0" Grid.Row="4" Grid.ColumnSpan="3" TextChanged="tbxStudentID_Copy2_TextChanged" BorderThickness="3" FontSize="14.667"/>
+        <TextBox x:Name="tbxClass3" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="128,5,0,0" Grid.Row="5" Grid.ColumnSpan="3" FontSize="14.667" BorderThickness="3"/>
+        <Label x:Name="lblCourseTitle" Content="Course Title:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,4,0,0" FontWeight="Bold" Width="100" Height="26" Grid.Row="1" FontSize="14.667"/>
+        <Label x:Name="lblCourseID" Content="Course ID:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,4,0,0" FontWeight="Bold" Width="100" Height="26" Grid.Row="2" FontSize="14.667"/>
+        <Label x:Name="lblClass1" Content="Class 1:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,10,0,0" FontWeight="Bold" Width="100" Height="26" Grid.Row="3" FontSize="14.667"/>
+        <Label x:Name="lblClass2" Content="Class 2:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,10,0,0" FontWeight="Bold" Width="100" Height="26" Grid.Row="4" FontSize="14.667"/>
+        <Label x:Name="lblClass3" Content="Class 3:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,4,0,0" FontWeight="Bold" Width="100" Height="26" Grid.Row="5" FontSize="14.667"/>
+        <Button x:Name="btnEdit" Content="Edit" Margin="51,10,0,0" VerticalAlignment="Top" Height="25" Click="btnEdit_Click" FontWeight="Bold" HorizontalAlignment="Left" Width="80" Grid.Row="7" Grid.Column="1" FontSize="14.667">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="btnAdd" Content="Add" Margin="60,10,0,0" VerticalAlignment="Top" Height="25" Click="btnAdd_Click" FontWeight="Bold" HorizontalAlignment="Left" Width="80" Grid.Row="7" Grid.Column="2" FontSize="14.667">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Label x:Name="lblInfoCourse" Content=" Create or Edit Course Details" VerticalAlignment="Top" FontWeight="Bold" Height="26" HorizontalAlignment="Left" Width="256" Grid.ColumnSpan="2" Grid.Column="1" FontSize="14.667"/>
+        <TextBox x:Name="tbxCourseDetails" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="153" Margin="10,28,0,0" Grid.Row="6" TextWrapping="Wrap" VerticalAlignment="Top" Width="522" TextChanged="textBox_TextChanged" BorderThickness="3" FontSize="14.667"/>
+        <Label x:Name="lblAvailableCourses" Content="Available Courses:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,2,0,0" FontWeight="Bold" Width="146" Height="26" Grid.Row="6" FontSize="14.667"/>
 
     </Grid>
 </Window>

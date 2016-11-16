@@ -6,10 +6,12 @@
         xmlns:local="clr-namespace:School_Soft"
         mc:Ignorable="d"
         Title="Edit Student Records" Height="450" Width="530">
-    <Grid>
+    <Grid Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="161*"/>
+            <ColumnDefinition Width="74*"/>
+            <ColumnDefinition Width="26*"/>
+            <ColumnDefinition Width="261*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="42*"/>
@@ -23,25 +25,33 @@
             <RowDefinition Height="41*"/>
             <RowDefinition Height="37*"/>
         </Grid.RowDefinitions>
-        <TextBox x:Name="tbxStudentID" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="175,16,0,0" Grid.Row="1" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="tbxForename" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="175,18,0,0" Grid.Row="3" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="tbxSurname" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="175,12,0,0" Grid.Row="4" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="tbxAddress1" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="175,13,0,0" Grid.Row="5" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="tbxAddress2" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="175,11,0,0" Grid.Row="6" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="tbxContact" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="175,3,0,0" Grid.Row="7" Grid.ColumnSpan="2"/>
-        <Label x:Name="lblStudentID" Content="Student ID:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,10,0,0" FontWeight="Bold" Width="100" Height="26" Grid.Row="1"/>
-        <Label x:Name="lblForename" Content="Forename:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,18,0,0" FontWeight="Bold" Width="100" Height="26" Grid.Row="3"/>
-        <Label x:Name="lblSurname" Content="Surname:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,17,0,0" FontWeight="Bold" Width="100" Height="26" Grid.Row="4" Grid.RowSpan="2"/>
-        <Label x:Name="lblAddress1" Content="Address:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,13,0,0" FontWeight="Bold" Width="100" Height="26" Grid.Row="5"/>
-        <Label x:Name="lblAddress2" Content="Address:" HorizontalAlignment="Left" Margin="70,10,0,33" FontWeight="Bold" Width="100" Grid.Row="6" Grid.RowSpan="3"/>
-        <Label x:Name="lblContact" Content="Contact No." HorizontalAlignment="Left" Margin="70,6,0,33" FontWeight="Bold" Width="100" Grid.Row="7" Grid.RowSpan="3"/>
-        <Button x:Name="btnBack" Content="Back" Margin="25,10,0,0" VerticalAlignment="Top" Height="25" Click="btnLogout_Click" FontWeight="Bold" HorizontalAlignment="Left" Width="80" Grid.Row="9"/>
-        <TextBox x:Name="tbxCourseID" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="175,10,0,0" Grid.Row="8" Grid.ColumnSpan="2"/>
-        <Label x:Name="lblCourseID" Content="Course ID:" HorizontalAlignment="Left" Margin="70,7,0,6" FontWeight="Bold" Width="100" RenderTransformOrigin="0.497,1.521" Grid.Row="8"/>
-        <Label x:Name="lblInfo1" Content="&#x9;&#x9;           Edit Selected Record" HorizontalAlignment="Center" VerticalAlignment="Top" Width="500" Height="41" FontWeight="Bold" Grid.ColumnSpan="2" FontSize="16" Margin="11,0"/>
-        <Button x:Name="btnAppend" Content="Append" Margin="156,10,25,0" VerticalAlignment="Top" Height="25" Click="btnLogout_Click" FontWeight="Bold" Grid.Row="9" Grid.Column="1"/>
-        <TextBox x:Name="tbxStudentID_Copy" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="175,10,0,0" Grid.Row="2" Grid.ColumnSpan="2"/>
-        <Label x:Name="lblStudentID_Copy" Content="Password:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,7,0,0" FontWeight="Bold" Width="100" Height="26" Grid.Row="2"/>
+        <TextBox x:Name="tbxStudentID" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="14.246,16,0,0" Grid.Row="1" Grid.ColumnSpan="3" Grid.Column="1" BorderThickness="3"/>
+        <TextBox x:Name="tbxForename" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="14.246,18,0,0" Grid.Row="3" Grid.ColumnSpan="3" Grid.Column="1" BorderThickness="3"/>
+        <TextBox x:Name="tbxSurname" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="14.246,12,0,0" Grid.Row="4" Grid.ColumnSpan="3" Grid.Column="1" BorderThickness="3"/>
+        <TextBox x:Name="tbxAddress1" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="14.246,13,0,0" Grid.Row="5" Grid.ColumnSpan="3" Grid.Column="1" BorderThickness="3"/>
+        <TextBox x:Name="tbxAddress2" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="14.246,11,0,0" Grid.Row="6" Grid.ColumnSpan="3" Grid.Column="1" BorderThickness="3"/>
+        <TextBox x:Name="tbxContact" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="14.246,3,0,0" Grid.Row="7" Grid.ColumnSpan="3" Grid.Column="1" BorderThickness="3"/>
+        <Label x:Name="lblStudentID" Content="Student ID:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,10,0,0" FontWeight="Bold" Width="100" Height="26" Grid.Row="1" Grid.ColumnSpan="2" FontSize="14.667"/>
+        <Label x:Name="lblForename" Content="Forename:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,18,0,0" FontWeight="Bold" Width="100" Height="26" Grid.Row="3" Grid.ColumnSpan="2" FontSize="14.667"/>
+        <Label x:Name="lblSurname" Content="Surname:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,17,0,0" FontWeight="Bold" Width="100" Height="26" Grid.Row="4" Grid.RowSpan="2" Grid.ColumnSpan="2" FontSize="14.667"/>
+        <Label x:Name="lblAddress1" Content="Address:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,13,0,0" FontWeight="Bold" Width="100" Height="26" Grid.Row="5" Grid.ColumnSpan="2" FontSize="14.667"/>
+        <Label x:Name="lblAddress2" Content="Address:" HorizontalAlignment="Left" Margin="70,10,0,33" FontWeight="Bold" Width="100" Grid.Row="6" Grid.RowSpan="3" Grid.ColumnSpan="2" FontSize="14.667"/>
+        <Label x:Name="lblContact" Content="Contact No." HorizontalAlignment="Left" Margin="70,6,0,33" FontWeight="Bold" Width="100" Grid.Row="7" Grid.RowSpan="3" Grid.ColumnSpan="2" FontSize="14.667"/>
+        <Button x:Name="btnBack" Content="Back" Margin="25,10,0,0" VerticalAlignment="Top" Height="25" Click="btnback" HorizontalAlignment="Left" Width="80" Grid.Row="9" FontSize="14.667" FontWeight="Bold">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <TextBox x:Name="tbxCourseID" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="14.246,10,0,0" Grid.Row="8" Grid.ColumnSpan="3" Grid.Column="1" BorderThickness="3"/>
+        <Label x:Name="lblCourseID" Content="Course ID:" HorizontalAlignment="Left" Margin="70,7,0,6" FontWeight="Bold" Width="100" RenderTransformOrigin="0.497,1.521" Grid.Row="8" Grid.ColumnSpan="2" FontSize="14.667"/>
+        <Label x:Name="lblInfo1" Content="&#x9;&#x9;           Edit Selected Record" HorizontalAlignment="Center" VerticalAlignment="Top" Width="500" Height="41" FontWeight="Bold" Grid.ColumnSpan="4" FontSize="16" Margin="11,0"/>
+        <Button x:Name="btnAppend" Content="Append" Margin="156,10,25,0" VerticalAlignment="Top" Height="25" Click="btnAppend_Click" FontWeight="Bold" Grid.Row="9" Grid.Column="3" FontSize="14.667">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <TextBox x:Name="tbxStudentID_Copy" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="14.246,10,0,0" Grid.Row="2" Grid.ColumnSpan="3" Grid.Column="1" BorderThickness="3"/>
+        <Label x:Name="lblStudentID_Copy" Content="Password:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,7,0,0" FontWeight="Bold" Width="100" Height="26" Grid.Row="2" Grid.ColumnSpan="2" FontSize="14.667"/>
 
     </Grid>
 </Window>

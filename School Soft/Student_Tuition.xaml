@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:School_Soft"
         mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        WindowStartupLocation="CenterScreen" WindowStyle="None"
         Title="Student_Tuition" Height="340" Width="530">
-    <Grid>
+    <Grid Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="25*"/>
             <ColumnDefinition Width="75*"/>
@@ -17,14 +19,19 @@
             <RowDefinition Height="109"/>
         </Grid.RowDefinitions>
         <StackPanel HorizontalAlignment="Left" Height="80" Margin="10,10,0,0" VerticalAlignment="Top" Width="502" Grid.ColumnSpan="2">
-            <Label x:Name="lblCourseTitle" Content="Course Title" HorizontalAlignment="Center" FontWeight="Bold"/>
-            <TextBox x:Name="tbxCourseName" Height="30" TextWrapping="Wrap"/>
+            <Label x:Name="lblCourseTitle" Content="Course Title" HorizontalAlignment="Center" FontWeight="Bold" FontSize="14.667"/>
+            <TextBox x:Name="tbxCourseName" IsReadOnly="True"  Height="30" TextWrapping="Wrap" ToolTip=" Course you are enrolled in" FontSize="14.667" BorderThickness="3" TextAlignment="Center"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" Height="80" Margin="10,0,0,0" VerticalAlignment="Top" Width="502" Grid.Row="1" Grid.ColumnSpan="2">
-            <Label x:Name="lblTuition" Content="Tuition Status" HorizontalAlignment="Center" FontWeight="Bold"/>
-            <TextBox x:Name="tbxFees" Height="30" TextWrapping="Wrap"/>
+            <Label x:Name="lblTuition" Content="Tuition Status" HorizontalAlignment="Center" FontWeight="Bold" FontSize="14.667" />
+            <TextBox x:Name="tbxFees" IsReadOnly="True" Height="30" TextWrapping="Wrap" TextChanged="tbxFees_TextChanged"   TextAlignment="Center" ToolTip=" Fees Status" FontSize="14.667" BorderThickness="3"/>
         </StackPanel>
-        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="10,69,0,0" Grid.Row="2" VerticalAlignment="Top" Width="80" Height="25" Click="btnLogout_Click" FontWeight="Bold"/>
+        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="10,69,0,0" Grid.Row="2" VerticalAlignment="Top" Width="80" Height="25" Click="btnLogout_Click" ToolTip=" Return to Student Dashboard" FontWeight="Bold" BorderThickness="2">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Label x:Name="lbltext" Content="User ID: " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="214" FontSize="14.667" FontWeight="Bold"/>
 
     </Grid>
 </Window>

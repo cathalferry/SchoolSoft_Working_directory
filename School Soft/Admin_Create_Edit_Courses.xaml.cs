@@ -32,9 +32,29 @@ namespace School_Soft
         private void btnLogout_Click(object sender, RoutedEventArgs e)
         {
 
+   
+
+
+            this.Hide();
+        
         }
 
         private void textBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void btnEdit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
 
         }

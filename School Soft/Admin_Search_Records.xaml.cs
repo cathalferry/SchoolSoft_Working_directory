@@ -24,7 +24,32 @@ namespace School_Soft
             InitializeComponent();
         }
 
-        private void btnLogout_Click(object sender, RoutedEventArgs e)
+    
+        private void btnEdit_Click(object sender, RoutedEventArgs e)
+        {
+            Admin_Edit_Student_Record Edit_Student = new Admin_Edit_Student_Record();
+            Edit_Student.ShowDialog();
+        }
+
+        private void btnFeesClick(object sender, RoutedEventArgs e)
+        {
+            
+            Admin_Tuition_Screen fees = new Admin_Tuition_Screen();
+            fees.ShowDialog();
+
+        }
+
+        private void btnback_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void btndelete_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnsearch_Click(object sender, RoutedEventArgs e)
         {
 
         }

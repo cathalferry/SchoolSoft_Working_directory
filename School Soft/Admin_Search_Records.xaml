@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:School_Soft"
         mc:Ignorable="d"
+        WindowStyle="None" WindowStartupLocation="CenterScreen" 
         Title="Search Student Records" Height="400" Width="530">
-    <Grid>
+    <Grid Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="25*"/>
             <ColumnDefinition Width="25*"/>
@@ -19,20 +20,40 @@
             <RowDefinition Height="221*"/>
             <RowDefinition Height="40*"/>
         </Grid.RowDefinitions>
-        <Button x:Name="btnTuition" Content="Tuition" Margin="25,10,0,0" VerticalAlignment="Top" Height="25" Click="btnLogout_Click" FontWeight="Bold" HorizontalAlignment="Left" Width="80" Grid.Row="3"/>
-        <Button x:Name="btnEdit" Content="Edit" Margin="25,10,0,0" VerticalAlignment="Top" Height="25" Click="btnLogout_Click" FontWeight="Bold" HorizontalAlignment="Left" Width="80" Grid.Row="3" Grid.Column="1"/>
-        <Button x:Name="btnBack" Content="Back" Margin="25,204,0,10" Click="btnLogout_Click" FontWeight="Bold" HorizontalAlignment="Left" Width="80" Grid.Row="2"/>
-        <Button x:Name="btnDelete" Content="Delete" Margin="25,10,0,0" VerticalAlignment="Top" Height="25" Click="btnLogout_Click" FontWeight="Bold" HorizontalAlignment="Left" Width="80" Grid.Row="3" Grid.Column="2"/>
-        <Button x:Name="btnSearch" Content="Search" Margin="25,10,0,0" VerticalAlignment="Top" Height="25" Click="btnLogout_Click" FontWeight="Bold" HorizontalAlignment="Left" Width="80" Grid.Row="3" Grid.Column="3"/>
-        <Label x:Name="lblSearch" Content="Search:" HorizontalAlignment="Left" Margin="40,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="80" FontWeight="Bold"/>
-        <Label x:Name="lblRecords" Content="Records:" HorizontalAlignment="Left" Margin="40,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="80" FontWeight="Bold"/>
-        <Label x:Name="lblinfoSearch" Content="                  Search Student Records" HorizontalAlignment="Center" Margin="0,10,116,0" VerticalAlignment="Top" Width="276" FontWeight="Bold" Grid.ColumnSpan="3" Height ="25" Grid.Column="1"/>
-        <Label x:Name="tbxRecords" Content="" Margin="10,10,10.667,10" Grid.Row="2" FontWeight="Bold" Grid.Column="1" Grid.ColumnSpan="3" ScrollViewer.HorizontalScrollBarVisibility="Auto" RenderTransformOrigin="0.5,0.5" >
+        <Button x:Name="btnTuition" Content="Tuition" Margin="25,10,0,0" VerticalAlignment="Top" Height="25" Click="btnFeesClick" FontWeight="Bold" HorizontalAlignment="Left" Width="80" Grid.Row="3" FontSize="14.667">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="btnEdit" Content="Edit" Margin="25,10,0,0" VerticalAlignment="Top" Height="25" Click="btnEdit_Click" FontWeight="Bold" HorizontalAlignment="Left" Width="80" Grid.Row="3" Grid.Column="1" FontSize="14.667">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="btnBack" Content="Back" Margin="25,204,0,10" Click="btnback_Click" FontWeight="Bold" HorizontalAlignment="Left" Width="80" Grid.Row="2" FontSize="14.667">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="btnDelete" Content="Delete" Margin="25,10,0,0" VerticalAlignment="Top" Height="25" Click="btndelete_Click" FontWeight="Bold" HorizontalAlignment="Left" Width="80" Grid.Row="3" Grid.Column="2" FontSize="14.667">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="btnSearch" Content="Search" Margin="25,10,0,0" VerticalAlignment="Top" Height="25" Click="btnsearch_Click" FontWeight="Bold" HorizontalAlignment="Left" Width="80" Grid.Row="3" Grid.Column="3" FontSize="14.667">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Label x:Name="lblSearch" Content="Search:" HorizontalAlignment="Left" Margin="40,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="80" FontWeight="Bold" FontSize="14.667"/>
+        <Label x:Name="lblRecords" Content="Records:" HorizontalAlignment="Left" Margin="40,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="80" FontWeight="Bold" FontSize="14.667"/>
+        <Label x:Name="lblinfoSearch" Content="                  Search Student Records" HorizontalAlignment="Center" Margin="0,10,117.667,10" Width="276" FontWeight="Bold" Grid.ColumnSpan="3" Grid.Column="1" FontSize="14.667"/>
+        <Label x:Name="tbxRecords" Content="" Margin="10,10,10.667,10" Grid.Row="2" FontWeight="Bold" Grid.Column="1" Grid.ColumnSpan="3" ScrollViewer.HorizontalScrollBarVisibility="Auto" RenderTransformOrigin="0.5,0.5" BorderThickness="3" >
             <Label.Effect>
                 <DropShadowEffect/>
             </Label.Effect>
         </Label>
-        <TextBox x:Name="tbxSearch" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="44.5,11,0,0" Grid.Row="1" Grid.ColumnSpan="3" Grid.Column="1"/>
+        <TextBox x:Name="tbxSearch" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="44.5,11,0,0" Grid.Row="1" Grid.ColumnSpan="3" Grid.Column="1" BorderThickness="3"/>
 
     </Grid>
 </Window>

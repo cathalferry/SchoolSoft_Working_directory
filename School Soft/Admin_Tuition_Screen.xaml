@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:School_Soft"
         mc:Ignorable="d"
         Title="Tution Details" Height="350" Width="530">
-    <Grid>
+    <Grid Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -20,19 +20,27 @@
             <RowDefinition Height="50*"/>
             <RowDefinition Height="50*"/>
         </Grid.RowDefinitions>
-        <TextBox x:Name="tbxStudentID" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="121,11,0,0" Grid.Row="1" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="tbxStudentID_Copy" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="121,11,0,0" Grid.Row="3" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="tbxStudentID_Copy1" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="121,10,0,0" Grid.Row="4" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="tbxStudentID_Copy2" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="121,11,0,0" Grid.Row="5" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="tbxStudentID_Copy3" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="121,10,0,0" Grid.Row="2" Grid.ColumnSpan="2"/>
-        <Button x:Name="btnBack" Content="Back" Margin="25,10,0,0" VerticalAlignment="Top" Height="25" Click="btnLogout_Click" FontWeight="Bold" Grid.Row="6" HorizontalAlignment="Left" Width="80"/>
-        <Label x:Name="lblStudentID" Content="Student ID:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,11,0,0" FontWeight="Bold" Width="100" Height="26" Grid.Row="1"/>
-        <Label x:Name="lblForename" Content="Forename:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,10,0,0" FontWeight="Bold" Width="100" Height="26" Grid.Row="2"/>
-        <Label x:Name="lblSurname" Content="Surname:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,11,0,0" FontWeight="Bold" Width="100" Height="26" Grid.Row="3"/>
-        <Label x:Name="lblCourse" Content="Course:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,10,0,0" FontWeight="Bold" Width="100" Height="26" Grid.Row="4"/>
-        <Label x:Name="lblStatus" Content="Status:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,11,0,0" FontWeight="Bold" Width="100" Height="26" Grid.Row="5"/>
-        <Button x:Name="btnFeeChange" Content="Set Fees" Margin="156,10,25,0" VerticalAlignment="Top" Height="25" Click="btnLogout_Click" FontWeight="Bold" Grid.Row="6" Grid.Column="1"/>
-        <Label x:Name="lblTuitionInfo" Content="View or Change Student Tuition Status" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="144,10,0,0" FontWeight="Bold" Width="254" Height="26" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="tbxStudentID" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="121,11,0,0" Grid.Row="1" Grid.ColumnSpan="2" BorderThickness="3" FontSize="14.667"/>
+        <TextBox x:Name="tbxStudentID_Copy" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="121,11,0,0" Grid.Row="3" Grid.ColumnSpan="2" BorderThickness="3" FontSize="14.667"/>
+        <TextBox x:Name="tbxStudentID_Copy1" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="121,10,0,0" Grid.Row="4" Grid.ColumnSpan="2" BorderThickness="3" FontSize="14.667"/>
+        <TextBox x:Name="tbxStudentID_Copy2" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="121,11,0,0" Grid.Row="5" Grid.ColumnSpan="2" FontSize="14.667" BorderThickness="3"/>
+        <TextBox x:Name="tbxStudentID_Copy3" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="121,10,0,0" Grid.Row="2" Grid.ColumnSpan="2" BorderThickness="3" FontSize="14.667"/>
+        <Button x:Name="btnBack" Content="Back" Margin="25,10,0,0" VerticalAlignment="Top" Height="25" Click="btnback_Click" FontWeight="Bold" Grid.Row="6" HorizontalAlignment="Left" Width="80" FontSize="14.667">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Label x:Name="lblStudentID" Content="Student ID:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,11,0,0" FontWeight="Bold" Width="100" Height="26" Grid.Row="1" FontSize="14.667"/>
+        <Label x:Name="lblForename" Content="Forename:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,10,0,0" FontWeight="Bold" Width="100" Height="26" Grid.Row="2" FontSize="14.667"/>
+        <Label x:Name="lblSurname" Content="Surname:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,11,0,0" FontWeight="Bold" Width="100" Height="26" Grid.Row="3" FontSize="14.667"/>
+        <Label x:Name="lblCourse" Content="Course:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,10,0,0" FontWeight="Bold" Width="100" Height="26" Grid.Row="4" FontSize="14.667"/>
+        <Label x:Name="lblStatus" Content="Status:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,11,0,0" FontWeight="Bold" Width="100" Height="26" Grid.Row="5" FontSize="14.667"/>
+        <Button x:Name="btnFeeChange" Content="Set Fees" Margin="156,10,25,0" VerticalAlignment="Top" Height="25" Click="btnfees_Click" FontWeight="Bold" Grid.Row="6" Grid.Column="1" FontSize="14.667">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Label x:Name="lblTuitionInfo" Content="View or Change Student Tuition Status" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="135,10,0,0" FontWeight="Bold" Width="254" Height="36" Grid.ColumnSpan="2" FontSize="16"/>
 
     </Grid>
 </Window>

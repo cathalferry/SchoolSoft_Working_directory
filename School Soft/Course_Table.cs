@@ -14,10 +14,19 @@ namespace School_Soft
     
     public partial class Course_Table
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Course_Table()
+        {
+            this.Student_Table = new HashSet<Student_Table>();
+        }
+    
         public string Course_Title { get; set; }
         public string Course_ID { get; set; }
         public string Class_Detail { get; set; }
         public string Class_Detail2 { get; set; }
         public string Class_Detail3 { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Student_Table> Student_Table { get; set; }
     }
 }

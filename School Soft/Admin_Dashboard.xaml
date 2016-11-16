@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:School_Soft"
         mc:Ignorable="d"
-        Title="Admin Dashboard" Height="340" Width="530">
-    <Grid>
+        AllowsTransparency
+="False"
+WindowStyle
+="None"
+
+ShowInTaskbar
+="False"
+Loaded
+=
+"Window_Loaded"
+WindowStartupLocation
+="CenterScreen"
+ 
+        Title="Admin Dashboard" Height="340" Width="530" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
+    <Grid Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="50*"/>
             <ColumnDefinition Width="25*"/>
@@ -17,11 +30,29 @@
             <RowDefinition Height="33*"/>
             <RowDefinition Height="34*"/>
         </Grid.RowDefinitions>
-        <Button x:Name="btnCreateUser" Content="Create Student Account" HorizontalAlignment="Left" Margin="162,22,0,0" VerticalAlignment="Top" Width="200" Height="70" Click="button_Click" FontWeight="Bold" Grid.ColumnSpan="2"/>
-        <Button x:Name="btnCreateCourse" Content="Create/Edit Courses" HorizontalAlignment="Left" Margin="162,16,0,0" VerticalAlignment="Top" Width="200" Height="70" FontWeight="Bold" Click="btnCourse_Click" Grid.Row="1" Grid.ColumnSpan="2"/>
-        
-        <Button x:Name="btnSearch" Content="Search Student Records" HorizontalAlignment="Left" Margin="162,17,0,0" VerticalAlignment="Top" Width="200" Height="70" FontWeight="Bold" Click="btnFees_Copy_Click" Grid.Row="2" Grid.ColumnSpan="2"/>
-        <Button x:Name="btnLogout" Content="Log Out" HorizontalAlignment="Left" Margin="14.118,48,0,0" VerticalAlignment="Top" Width="80" Height="30" FontWeight="Bold" Click="btnLogout_Click" Grid.Row="2" Grid.Column="2"/>
+        <Button x:Name="btnCreateUser" Content="Create Student Account" HorizontalAlignment="Left" Margin="162,22,0,0" VerticalAlignment="Top" Width="200" Height="70" Click="button_Click" FontWeight="Bold" Grid.ColumnSpan="2" FontSize="14.667">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="btnCreateCourse" Content="Create/Edit Courses" HorizontalAlignment="Left" Margin="162,16,0,0" VerticalAlignment="Top" Width="200" Height="70" FontWeight="Bold" Click="btnCourse_Click" Grid.Row="1" Grid.ColumnSpan="2" FontSize="14.667">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+
+        <Button x:Name="btnSearch" Content="Search Student Records" HorizontalAlignment="Left" Margin="162,17,0,0" VerticalAlignment="Top" Width="200" Height="70" FontWeight="Bold" Click="btnFees_Copy_Click" Grid.Row="2" Grid.ColumnSpan="2" FontSize="14.667">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="btnLogout" Content="Log Out" HorizontalAlignment="Left" Margin="14.118,48,0,0" VerticalAlignment="Top" Width="80" Height="30" FontWeight="Bold" Click="btnLogout_Click" Grid.Row="2" Grid.Column="2" FontSize="14.667" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Label x:Name="lblUser" Content="User:" HorizontalAlignment="Left" Margin="10,22,0,0" VerticalAlignment="Top" RenderTransformOrigin="-10.289,-4.769" Width="136" FontWeight="Bold" FontSize="14.667"/>
+        <Label x:Name="lblUserinfo" Content="" HorizontalAlignment="Left" Margin="64,22,0,0" VerticalAlignment="Top" RenderTransformOrigin="-10.289,-4.769" Width="136" FontSize="14.667" FontWeight="Bold"/>
 
     </Grid>
 </Window>
