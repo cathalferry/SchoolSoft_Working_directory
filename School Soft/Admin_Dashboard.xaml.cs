@@ -39,6 +39,11 @@ namespace School_Soft
         private void btnCourse_Click(object sender, RoutedEventArgs e)
         {
             Admin_Create_Edit_Courses edit_course = new Admin_Create_Edit_Courses();
+           
+
+            edit_course.user = login;
+
+         
             edit_course.ShowDialog();
         }
 

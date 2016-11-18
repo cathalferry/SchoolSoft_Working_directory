@@ -23,7 +23,11 @@ Loaded
         </Grid.ColumnDefinitions>
         <Label x:Name="lblUser"  FontWeight="Bold"  Content=" User ID" HorizontalAlignment="Left" Margin="99,10,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="109" FontSize="18.667"/>
         <Label x:Name="lblPass" Content="Password" HorizontalAlignment="Left" Margin="99,71,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" FontWeight="Bold" FontSize="18.667" />
-        <TextBox x:Name="tbxUser" TabIndex="0" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="25" Margin="56,45,0,0" TextWrapping="Wrap" ToolTip="Please enter your Username " VerticalAlignment="Top" Width="180" TextChanged="tbxUser_TextChanged" BorderThickness="2" FontSize="14.667"/>
+        <TextBox x:Name="tbxUser" TabIndex="0" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="25" Margin="56,45,0,0" TextWrapping="Wrap" ToolTip="Please enter your Username " VerticalAlignment="Top" Width="180" TextChanged="tbxUser_TextChanged" BorderThickness="2" FontSize="14.667">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
         <Button x:Name="btnLogin" FontWeight="Bold"  Content="Login" Margin="22,30,24,0" Grid.Row="1" VerticalAlignment="Top"  Height="25" Grid.Column="1" Click="btnLogin_Click" BorderThickness="2" ToolTip="Login to SchoolSoft">
             <Button.Effect>
                 <DropShadowEffect/>
@@ -34,7 +38,11 @@ Loaded
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <PasswordBox x:Name="tbxPassword" TabIndex="1" HorizontalAlignment="Left" Margin="56,111,0,0" VerticalAlignment="Top" Width="180" Height="25" ToolTip=" Please enter your password" Grid.ColumnSpan="2" BorderThickness="2" FontSize="14.667" Grid.RowSpan="2"/>
+        <PasswordBox x:Name="tbxPassword" TabIndex="1" HorizontalAlignment="Left" Margin="56,111,0,0" VerticalAlignment="Top" Width="180" Height="25" ToolTip=" Please enter your password" Grid.ColumnSpan="2" BorderThickness="2" FontSize="14.667" Grid.RowSpan="2">
+            <PasswordBox.Effect>
+                <DropShadowEffect/>
+            </PasswordBox.Effect>
+        </PasswordBox>
         <Label x:Name="lblLoginInformation" Content="" HorizontalAlignment="Left" Margin="64,75,0,0" Width="180 " Height="36" Grid.Row="1" VerticalAlignment="Top" Grid.ColumnSpan="2" FontSize="14.667" FontWeight="Bold"/>
     </Grid>
 </Window>

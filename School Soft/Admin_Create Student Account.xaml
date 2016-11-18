@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:School_Soft"
         mc:Ignorable="d"
-        Title="Create Student Account" Height="450" Width="530">
+        Title="Create Student Account" Height="480" Width="530">
     <Grid Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -23,12 +23,36 @@
             <RowDefinition Height="44*"/>
             <RowDefinition Height="45*"/>
         </Grid.RowDefinitions>
-        <TextBox x:Name="tbxStudentID" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="175,8,0,0" Grid.Row="2" Grid.ColumnSpan="2" FontSize="14.667" BorderThickness="3"/>
-        <TextBox x:Name="tbxForename" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="175,10,0,0" Grid.Row="3" Grid.ColumnSpan="2" FontSize="14.667" BorderThickness="3"/>
-        <TextBox x:Name="tbxSurname" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="175,10,0,0" Grid.Row="4" Grid.ColumnSpan="2" FontSize="14.667" BorderThickness="3,3,3,4"/>
-        <TextBox x:Name="tbxAddress1" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="175,12,0,0" Grid.Row="5" Grid.ColumnSpan="2" FontSize="14.667" BorderThickness="3"/>
-        <TextBox x:Name="tbxAddress2" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="175,12,0,0" Grid.Row="6" Grid.ColumnSpan="2" FontSize="14.667" BorderThickness="3"/>
-        <TextBox x:Name="tbxContact" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="175,7,0,0" Grid.Row="7" Grid.ColumnSpan="2" FontSize="14.667" BorderThickness="3"/>
+        <TextBox x:Name="tbxStudentID" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="175,8,0,0" Grid.Row="2" Grid.ColumnSpan="2" FontSize="14.667" BorderThickness="3">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox x:Name="tbxForename" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="175,10,0,0" Grid.Row="3" Grid.ColumnSpan="2" FontSize="14.667" BorderThickness="3">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox x:Name="tbxSurname" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="175,10,0,0" Grid.Row="4" Grid.ColumnSpan="2" FontSize="14.667" BorderThickness="3,3,3,4">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox x:Name="tbxAddress1" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="175,12,0,0" Grid.Row="5" Grid.ColumnSpan="2" FontSize="14.667" BorderThickness="3">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox x:Name="tbxAddress2" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="175,12,0,0" Grid.Row="6" Grid.ColumnSpan="2" FontSize="14.667" BorderThickness="3">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox x:Name="tbxContact" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="175,7,0,0" Grid.Row="7" Grid.ColumnSpan="2" FontSize="14.667" BorderThickness="3">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
         <Label x:Name="lblStudentID" Content="Student ID:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,5,0,0" FontWeight="Bold" Width="100" Height="26" Grid.Row="2" FontSize="14.667"/>
         <Label x:Name="lblForename" Content="Forename:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,10,0,0" FontWeight="Bold" Width="100" Grid.Row="3" Height="26" FontSize="14.667"/>
         <Label x:Name="lblSurname" Content="Surname:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,15,0,0" FontWeight="Bold" Width="100" Grid.Row="4" Height="26" FontSize="14.667"/>
@@ -40,7 +64,11 @@
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <TextBox x:Name="tbxCourseID" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="175,10,0,0" Grid.Row="8" Grid.ColumnSpan="2" FontSize="14.667" TextChanged="tbxCourseID_TextChanged" BorderThickness="3"/>
+        <TextBox x:Name="tbxCourseID" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="175,10,0,0" Grid.Row="8" Grid.ColumnSpan="2" FontSize="14.667" TextChanged="tbxCourseID_TextChanged" BorderThickness="3">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
         <Label x:Name="lblCourseID" Content="Course ID:" HorizontalAlignment="Left" Margin="70,10,0,7" FontWeight="Bold" Width="100" Grid.Row="8" RenderTransformOrigin="0.497,1.521" FontSize="14.667"/>
         <Label x:Name="lblInfo1" Content="&#x9;&#x9;&#x9;         Enter Student Details Below.&#xA;&#x9;&#x9;                         Student ID must be unique." HorizontalAlignment="Center" VerticalAlignment="Top" Width="522" Height="41" Grid.ColumnSpan="2" FontWeight="Bold" Grid.RowSpan="2"/>
         <Button x:Name="btnCreate" Content="Create" HorizontalAlignment="Left" Margin="25,6,0,0" VerticalAlignment="Top" Width="80" Height="25" Click="btnCreate_Click" FontWeight="Bold" Grid.Row="9" FontSize="14.667">
@@ -48,7 +76,11 @@
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <TextBox x:Name="tbxPassword" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="175,6,0,0" Grid.Row="1" Grid.ColumnSpan="2" FontSize="14.667" BorderThickness="3"/>
+        <TextBox x:Name="tbxPassword" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="175,6,0,0" Grid.Row="1" Grid.ColumnSpan="2" FontSize="14.667" BorderThickness="3">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
         <Label x:Name="lblPassword" Content="Password:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,6,0,0" FontWeight="Bold" Width="100" Height="26" Grid.Row="1" FontSize="14.667"/>
 
     </Grid>

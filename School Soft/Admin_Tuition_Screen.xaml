@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:School_Soft"
         mc:Ignorable="d"
-        Title="Tution Details" Height="350" Width="530">
+        Title="Tution Details" Height="380" Width="530">
     <Grid Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -20,12 +20,32 @@
             <RowDefinition Height="50*"/>
             <RowDefinition Height="50*"/>
         </Grid.RowDefinitions>
-        <TextBox x:Name="tbxStudentID" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="121,11,0,0" Grid.Row="1" Grid.ColumnSpan="2" BorderThickness="3" FontSize="14.667"/>
-        <TextBox x:Name="tbxStudentID_Copy" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="121,11,0,0" Grid.Row="3" Grid.ColumnSpan="2" BorderThickness="3" FontSize="14.667"/>
-        <TextBox x:Name="tbxStudentID_Copy1" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="121,10,0,0" Grid.Row="4" Grid.ColumnSpan="2" BorderThickness="3" FontSize="14.667"/>
-        <TextBox x:Name="tbxStudentID_Copy2" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="121,11,0,0" Grid.Row="5" Grid.ColumnSpan="2" FontSize="14.667" BorderThickness="3"/>
-        <TextBox x:Name="tbxStudentID_Copy3" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="121,10,0,0" Grid.Row="2" Grid.ColumnSpan="2" BorderThickness="3" FontSize="14.667"/>
-        <Button x:Name="btnBack" Content="Back" Margin="25,10,0,0" VerticalAlignment="Top" Height="25" Click="btnback_Click" FontWeight="Bold" Grid.Row="6" HorizontalAlignment="Left" Width="80" FontSize="14.667">
+        <TextBox x:Name="tbxStudentID" ToolTip="Unique Student ID" IsReadOnly="True" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="121,11,0,0" Grid.Row="1" Grid.ColumnSpan="2" BorderThickness="3" FontSize="14.667">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox x:Name="tbxSurname" ToolTip="Student Surname"  IsReadOnly="True" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="121,11,0,0" Grid.Row="3" Grid.ColumnSpan="2" BorderThickness="3" FontSize="14.667">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox x:Name="tbxCourse"  ToolTip="Student Course Details" IsReadOnly="True" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="121,10,0,0" Grid.Row="4" Grid.ColumnSpan="2" BorderThickness="3" FontSize="14.667">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox x:Name="tbxFees" IsReadOnly="True" ToolTip=" Student Fees Status" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="121,11,0,0" Grid.Row="5" Grid.ColumnSpan="2" FontSize="14.667" BorderThickness="3">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox x:Name="tbxForename" ToolTip=" Student Forename" IsReadOnly="True"  HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="121,10,0,0" Grid.Row="2" Grid.ColumnSpan="2" BorderThickness="3" FontSize="14.667">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <Button x:Name="btnBack" ToolTip="Return to Dashboard" Content="Back" Margin="25,10,0,0" VerticalAlignment="Top" Height="25" Click="btnback_Click" FontWeight="Bold" Grid.Row="6" HorizontalAlignment="Left" Width="80" FontSize="14.667">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>

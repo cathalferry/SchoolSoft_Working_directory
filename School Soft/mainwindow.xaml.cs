@@ -44,7 +44,6 @@ namespace School_Soft
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
 
-
             Login_Table userDetails = new Login_Table(); //new instance of login table from SQL database
             string currentuser = tbxUser.Text.Trim();//removing spaces with trim  get user detials
             string curentpassword = tbxPassword.Password; //use password box to hide character entry

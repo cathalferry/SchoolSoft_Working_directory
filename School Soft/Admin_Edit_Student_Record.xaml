@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:School_Soft"
         mc:Ignorable="d"
-        Title="Edit Student Records" Height="450" Width="530">
+        Title="Edit Student Records" Height="480" Width="530">
     <Grid Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="161*"/>
@@ -25,32 +25,64 @@
             <RowDefinition Height="41*"/>
             <RowDefinition Height="37*"/>
         </Grid.RowDefinitions>
-        <TextBox x:Name="tbxStudentID" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="14.246,16,0,0" Grid.Row="1" Grid.ColumnSpan="3" Grid.Column="1" BorderThickness="3"/>
-        <TextBox x:Name="tbxForename" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="14.246,18,0,0" Grid.Row="3" Grid.ColumnSpan="3" Grid.Column="1" BorderThickness="3"/>
-        <TextBox x:Name="tbxSurname" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="14.246,12,0,0" Grid.Row="4" Grid.ColumnSpan="3" Grid.Column="1" BorderThickness="3"/>
-        <TextBox x:Name="tbxAddress1" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="14.246,13,0,0" Grid.Row="5" Grid.ColumnSpan="3" Grid.Column="1" BorderThickness="3"/>
-        <TextBox x:Name="tbxAddress2" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="14.246,11,0,0" Grid.Row="6" Grid.ColumnSpan="3" Grid.Column="1" BorderThickness="3"/>
-        <TextBox x:Name="tbxContact" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="14.246,3,0,0" Grid.Row="7" Grid.ColumnSpan="3" Grid.Column="1" BorderThickness="3"/>
+        <TextBox x:Name="tbxStudentID" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="14.246,16,0,0" Grid.Row="1" Grid.ColumnSpan="3" Grid.Column="1" BorderThickness="3" FontSize="14.667">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox x:Name="tbxForename" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="14.246,18,0,0" Grid.Row="3" Grid.ColumnSpan="3" Grid.Column="1" BorderThickness="3" FontSize="14.667">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox x:Name="tbxSurname" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="14.246,12,0,0" Grid.Row="4" Grid.ColumnSpan="3" Grid.Column="1" BorderThickness="3" FontSize="14.667">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox x:Name="tbxAddress1" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="14.246,13,0,0" Grid.Row="5" Grid.ColumnSpan="3" Grid.Column="1" BorderThickness="3" FontSize="14.667">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox x:Name="tbxAddress2" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="14.246,11,0,0" Grid.Row="6" Grid.ColumnSpan="3" Grid.Column="1" BorderThickness="3" FontSize="14.667">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox x:Name="tbxContact" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="14.246,3,0,0" Grid.Row="7" Grid.ColumnSpan="3" Grid.Column="1" BorderThickness="3" FontSize="14.667">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
         <Label x:Name="lblStudentID" Content="Student ID:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,10,0,0" FontWeight="Bold" Width="100" Height="26" Grid.Row="1" Grid.ColumnSpan="2" FontSize="14.667"/>
         <Label x:Name="lblForename" Content="Forename:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,18,0,0" FontWeight="Bold" Width="100" Height="26" Grid.Row="3" Grid.ColumnSpan="2" FontSize="14.667"/>
         <Label x:Name="lblSurname" Content="Surname:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,17,0,0" FontWeight="Bold" Width="100" Height="26" Grid.Row="4" Grid.RowSpan="2" Grid.ColumnSpan="2" FontSize="14.667"/>
         <Label x:Name="lblAddress1" Content="Address:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,13,0,0" FontWeight="Bold" Width="100" Height="26" Grid.Row="5" Grid.ColumnSpan="2" FontSize="14.667"/>
         <Label x:Name="lblAddress2" Content="Address:" HorizontalAlignment="Left" Margin="70,10,0,33" FontWeight="Bold" Width="100" Grid.Row="6" Grid.RowSpan="3" Grid.ColumnSpan="2" FontSize="14.667"/>
         <Label x:Name="lblContact" Content="Contact No." HorizontalAlignment="Left" Margin="70,6,0,33" FontWeight="Bold" Width="100" Grid.Row="7" Grid.RowSpan="3" Grid.ColumnSpan="2" FontSize="14.667"/>
-        <Button x:Name="btnBack" Content="Back" Margin="25,10,0,0" VerticalAlignment="Top" Height="25" Click="btnback" HorizontalAlignment="Left" Width="80" Grid.Row="9" FontSize="14.667" FontWeight="Bold">
+        <Button x:Name="btnBack" Content="Back" Margin="25,5,0,0" VerticalAlignment="Top" Height="25" Click="btnback" HorizontalAlignment="Left" Width="80" Grid.Row="9" FontSize="14.667" FontWeight="Bold">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <TextBox x:Name="tbxCourseID" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="14.246,10,0,0" Grid.Row="8" Grid.ColumnSpan="3" Grid.Column="1" BorderThickness="3"/>
+        <TextBox x:Name="tbxCourseID" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="14.246,10,0,0" Grid.Row="8" Grid.ColumnSpan="3" Grid.Column="1" BorderThickness="3" FontSize="14.667">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
         <Label x:Name="lblCourseID" Content="Course ID:" HorizontalAlignment="Left" Margin="70,7,0,6" FontWeight="Bold" Width="100" RenderTransformOrigin="0.497,1.521" Grid.Row="8" Grid.ColumnSpan="2" FontSize="14.667"/>
         <Label x:Name="lblInfo1" Content="&#x9;&#x9;           Edit Selected Record" HorizontalAlignment="Center" VerticalAlignment="Top" Width="500" Height="41" FontWeight="Bold" Grid.ColumnSpan="4" FontSize="16" Margin="11,0"/>
-        <Button x:Name="btnAppend" Content="Append" Margin="156,10,25,0" VerticalAlignment="Top" Height="25" Click="btnAppend_Click" FontWeight="Bold" Grid.Row="9" Grid.Column="3" FontSize="14.667">
+        <Button x:Name="btnAppend" Content="Append" Margin="156,5,25,0" VerticalAlignment="Top" Height="25" Click="btnAppend_Click" FontWeight="Bold" Grid.Row="9" Grid.Column="3" FontSize="14.667">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <TextBox x:Name="tbxStudentID_Copy" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="14.246,10,0,0" Grid.Row="2" Grid.ColumnSpan="3" Grid.Column="1" BorderThickness="3"/>
+        <TextBox x:Name="tbxStudentID_Copy" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="14.246,10,0,0" Grid.Row="2" Grid.ColumnSpan="3" Grid.Column="1" BorderThickness="3" FontSize="14.667">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
         <Label x:Name="lblStudentID_Copy" Content="Password:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,7,0,0" FontWeight="Bold" Width="100" Height="26" Grid.Row="2" Grid.ColumnSpan="2" FontSize="14.667"/>
 
     </Grid>

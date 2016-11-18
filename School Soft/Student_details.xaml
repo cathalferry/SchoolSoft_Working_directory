@@ -1,0 +1,71 @@
+﻿<Window x:Class="School_Soft.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:School_Soft"
+        mc:Ignorable="d"
+         Loaded="Window_Loaded"
+        WindowStartupLocation="CenterScreen" WindowStyle="None" 
+        Title="My Details" Height="340" Width="530">
+    <Grid Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition Height="45"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="tbxStudentID"  ToolTip=" Your Unique User ID"   IsReadOnly="True" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Grid.ColumnSpan="2" Margin="175,10,0,0" BorderThickness="2" FontSize="14.667">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox x:Name="tbxForename" ToolTip=" Your Firstname" IsReadOnly="True" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Grid.ColumnSpan="2" Margin="175,10,0,0" Grid.Row="2" BorderThickness="2" FontSize="14.667">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox x:Name="tbxSurname" ToolTip=" Your Surname" IsReadOnly="True" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Grid.ColumnSpan="2" Margin="175,10,0,0" Grid.Row="5" BorderThickness="2" FontSize="14.667">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox x:Name="tbxAddress1" ToolTip="Your Address Details" IsReadOnly="True" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Grid.ColumnSpan="2" Margin="175,10,0,0" Grid.Row="6" BorderThickness="2" FontSize="14.667">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox x:Name="tbxAddress2" ToolTip="Your Address Details" IsReadOnly="True" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Grid.ColumnSpan="2" Margin="175,10,0,0" Grid.Row="7" BorderThickness="2" FontSize="14.667">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <TextBox x:Name="tbxContact" ToolTip=" Your Contact Number" IsReadOnly="True"  HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Grid.ColumnSpan="2" Margin="175,10,0,0" Grid.Row="8" BorderThickness="2" FontSize="14.667">
+            <TextBox.Effect>
+                <DropShadowEffect/>
+            </TextBox.Effect>
+        </TextBox>
+        <Label x:Name="lblStudentID" Content="Student ID:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="32,9,0,0" FontWeight="Bold" Width="100" FontSize="14.667"/>
+        <Label x:Name="lblForename" Content="Forename:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="32,10,0,0" FontWeight="Bold" Width="100" Grid.Row="2" FontSize="14.667"/>
+        <Label x:Name="lblSurname" Content="Surname:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="32,10,0,0" FontWeight="Bold" Width="100" Grid.Row="5" FontSize="14.667"/>
+        <Label x:Name="lblAddress1" Content="Address:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="32,10,0,0" FontWeight="Bold" Width="100" Grid.Row="6" FontSize="14.667"/>
+        <Label x:Name="lblAddress2" Content="Address:" HorizontalAlignment="Left" Margin="32,9,0,10" FontWeight="Bold" Width="100" Grid.Row="7" FontSize="14.667"/>
+        <Label x:Name="l" Content="Contact No." HorizontalAlignment="Left" Margin="32,9,0,10" FontWeight="Bold" Width="100" Grid.Row="8" FontSize="14.667"/>
+        <Button x:Name="btnLogout" ToolTip=" Return to Dashboard" Content="Back" Grid.Column="1" HorizontalAlignment="Left" Margin="140,10,10,2" Grid.Row="9" VerticalAlignment="Top" Width="80" Height="25" Click="btnLogout_Click" FontWeight="Bold" BorderThickness="2" FontSize="14.667">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+
+    </Grid>
+</Window>

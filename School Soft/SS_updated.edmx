@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SS_UPADATEDModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Course_Table">
+          <Key>
+            <PropertyRef Name="Course_ID" />
+          </Key>
+          <Property Name="Course_Title" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="Course_ID" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Class_Detail" Type="varchar" MaxLength="40" />
+          <Property Name="Class_Detail2" Type="varchar" MaxLength="40" />
+          <Property Name="Class_Detail3" Type="varchar" MaxLength="40" />
+        </EntityType>
+        <EntityType Name="Login_Table">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Admin_Status" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Student_Table">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Surname" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Forename" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Address1" Type="varchar" MaxLength="40" />
+          <Property Name="Address2" Type="varchar" MaxLength="40" />
+          <Property Name="Contact" Type="int" />
+          <Property Name="Fee_Status" Type="int" Nullable="false" />
+          <Property Name="Course_ID" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Student_Login">
+          <End Role="Login_Table" Type="Self.Login_Table" Multiplicity="1" />
+          <End Role="Student_Table" Type="Self.Student_Table" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Login_Table">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Student_Table">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Student_Table_ToTable">
+          <End Role="Course_Table" Type="Self.Course_Table" Multiplicity="1" />
+          <End Role="Student_Table" Type="Self.Student_Table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Course_Table">
+              <PropertyRef Name="Course_ID" />
+            </Principal>
+            <Dependent Role="Student_Table">
+              <PropertyRef Name="Course_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="SS_UPADATEDModelStoreContainer">
+          <EntitySet Name="Course_Table" EntityType="Self.Course_Table" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Login_Table" EntityType="Self.Login_Table" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Student_Table" EntityType="Self.Student_Table" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Student_Login" Association="Self.FK_Student_Login">
+            <End Role="Login_Table" EntitySet="Login_Table" />
+            <End Role="Student_Table" EntitySet="Student_Table" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Student_Table_ToTable" Association="Self.FK_Student_Table_ToTable">
+            <End Role="Course_Table" EntitySet="Course_Table" />
+            <End Role="Student_Table" EntitySet="Student_Table" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SS_UPADATEDModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Course_Table">
+          <Key>
+            <PropertyRef Name="Course_ID" />
+          </Key>
+          <Property Name="Course_Title" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Course_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Class_Detail" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="Class_Detail2" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="Class_Detail3" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Student_Table" Relationship="Self.FK_Student_Table_ToTable" FromRole="Course_Table" ToRole="Student_Table" />
+        </EntityType>
+        <EntityType Name="Login_Table">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Admin_Status" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Student_Table" Relationship="Self.FK_Student_Login" FromRole="Login_Table" ToRole="Student_Table" />
+        </EntityType>
+        <EntityType Name="Student_Table">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Surname" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Forename" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Address1" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="Address2" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="Contact" Type="Int32" />
+          <Property Name="Fee_Status" Type="Int32" Nullable="false" />
+          <Property Name="Course_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Course_Table" Relationship="Self.FK_Student_Table_ToTable" FromRole="Student_Table" ToRole="Course_Table" />
+          <NavigationProperty Name="Login_Table" Relationship="Self.FK_Student_Login" FromRole="Student_Table" ToRole="Login_Table" />
+        </EntityType>
+        <Association Name="FK_Student_Table_ToTable">
+          <End Role="Course_Table" Type="Self.Course_Table" Multiplicity="1" />
+          <End Role="Student_Table" Type="Self.Student_Table" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Course_Table">
+              <PropertyRef Name="Course_ID" />
+            </Principal>
+            <Dependent Role="Student_Table">
+              <PropertyRef Name="Course_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Student_Login">
+          <End Role="Login_Table" Type="Self.Login_Table" Multiplicity="1" />
+          <End Role="Student_Table" Type="Self.Student_Table" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Login_Table">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Student_Table">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="SS_UPADATEDEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Course_Table" EntityType="Self.Course_Table" />
+          <EntitySet Name="Login_Table" EntityType="Self.Login_Table" />
+          <EntitySet Name="Student_Table" EntityType="Self.Student_Table" />
+          <AssociationSet Name="FK_Student_Table_ToTable" Association="Self.FK_Student_Table_ToTable">
+            <End Role="Course_Table" EntitySet="Course_Table" />
+            <End Role="Student_Table" EntitySet="Student_Table" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Student_Login" Association="Self.FK_Student_Login">
+            <End Role="Login_Table" EntitySet="Login_Table" />
+            <End Role="Student_Table" EntitySet="Student_Table" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SS_UPADATEDModelStoreContainer" CdmEntityContainer="SS_UPADATEDEntities">
+          <EntitySetMapping Name="Course_Table">
+            <EntityTypeMapping TypeName="SS_UPADATEDModel.Course_Table">
+              <MappingFragment StoreEntitySet="Course_Table">
+                <ScalarProperty Name="Course_Title" ColumnName="Course_Title" />
+                <ScalarProperty Name="Course_ID" ColumnName="Course_ID" />
+                <ScalarProperty Name="Class_Detail" ColumnName="Class_Detail" />
+                <ScalarProperty Name="Class_Detail2" ColumnName="Class_Detail2" />
+                <ScalarProperty Name="Class_Detail3" ColumnName="Class_Detail3" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Login_Table">
+            <EntityTypeMapping TypeName="SS_UPADATEDModel.Login_Table">
+              <MappingFragment StoreEntitySet="Login_Table">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Admin_Status" ColumnName="Admin_Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Student_Table">
+            <EntityTypeMapping TypeName="SS_UPADATEDModel.Student_Table">
+              <MappingFragment StoreEntitySet="Student_Table">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="Surname" ColumnName="Surname" />
+                <ScalarProperty Name="Forename" ColumnName="Forename" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="Address2" ColumnName="Address2" />
+                <ScalarProperty Name="Contact" ColumnName="Contact" />
+                <ScalarProperty Name="Fee_Status" ColumnName="Fee_Status" />
+                <ScalarProperty Name="Course_ID" ColumnName="Course_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
