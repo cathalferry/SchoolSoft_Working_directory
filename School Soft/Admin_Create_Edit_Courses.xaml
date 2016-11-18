@@ -25,32 +25,32 @@
             <RowDefinition Height="100*"/>
             <RowDefinition Height="25*"/>
         </Grid.RowDefinitions>
-        <Button x:Name="btnBack" ToolTip=" Return to Dashboard" Content="Back" Margin="43,10,56,0" VerticalAlignment="Top" Height="25" Click="btnBack_Click" FontWeight="Bold" Grid.Row="7" RenderTransformOrigin="0.66,0.498" FontSize="14.667">
+        <Button x:Name="btnBack" ToolTip=" Return to Dashboard" Content="Back" Margin="43,10,56,0" VerticalAlignment="Top" Height="30" Click="btnBack_Click" FontWeight="Bold" Grid.Row="7" RenderTransformOrigin="0.66,0.498" FontSize="14.667">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <TextBox x:Name="tbxCourseTitle" ToolTip="Title of Course to edit" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="433" Margin="128,5,0,0" Grid.Row="1" Grid.ColumnSpan="3" FontSize="14.667" BorderThickness="3">
+        <TextBox x:Name="tbxCourseTitle" ToolTip="Title of Course to edit" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="433" Margin="128,5,0,0" Grid.Row="1" Grid.ColumnSpan="3" FontSize="14.667" BorderThickness="3">
             <TextBox.Effect>
                 <DropShadowEffect/>
             </TextBox.Effect>
         </TextBox>
-        <TextBox x:Name="tbxCourseID"  ToolTip="Course ID" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="433" Margin="128,5,0,0" Grid.Row="2" Grid.ColumnSpan="3" BorderThickness="3" FontSize="14.667">
+        <TextBox x:Name="tbxCourseID"  ToolTip="Course ID" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="433" Margin="128,5,0,0" Grid.Row="2" Grid.ColumnSpan="3" BorderThickness="3" FontSize="14.667">
             <TextBox.Effect>
                 <DropShadowEffect/>
             </TextBox.Effect>
         </TextBox>
-        <TextBox x:Name="tbxClass1"  ToolTip=" Edit or Add Class Details" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="433" Margin="128,5,0,0" Grid.Row="3" Grid.ColumnSpan="3" FontSize="14.667" BorderThickness="3">
+        <TextBox x:Name="tbxClass1"  ToolTip=" Edit or Add Class Details" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="433" Margin="128,5,0,0" Grid.Row="3" Grid.ColumnSpan="3" FontSize="14.667" BorderThickness="3">
             <TextBox.Effect>
                 <DropShadowEffect/>
             </TextBox.Effect>
         </TextBox>
-        <TextBox x:Name="tbxClass2"  ToolTip="Edit or Add Class Details" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="433" Margin="128,5,0,0" Grid.Row="4" Grid.ColumnSpan="3" TextChanged="tbxStudentID_Copy2_TextChanged" BorderThickness="3" FontSize="14.667">
+        <TextBox x:Name="tbxClass2"  ToolTip="Edit or Add Class Details" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="433" Margin="128,5,0,0" Grid.Row="4" Grid.ColumnSpan="3" TextChanged="tbxStudentID_Copy2_TextChanged" BorderThickness="3" FontSize="14.667">
             <TextBox.Effect>
                 <DropShadowEffect/>
             </TextBox.Effect>
         </TextBox>
-        <TextBox x:Name="tbxClass3" ToolTip=" Edit or Add Class Details" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="433" Margin="128,5,0,0" Grid.Row="5" Grid.ColumnSpan="3" FontSize="14.667" BorderThickness="3" TextChanged="tbxClass3_TextChanged">
+        <TextBox x:Name="tbxClass3" ToolTip=" Edit or Add Class Details" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="433" Margin="128,5,0,0" Grid.Row="5" Grid.ColumnSpan="3" FontSize="14.667" BorderThickness="3" TextChanged="tbxClass3_TextChanged">
             <TextBox.Effect>
                 <DropShadowEffect/>
             </TextBox.Effect>

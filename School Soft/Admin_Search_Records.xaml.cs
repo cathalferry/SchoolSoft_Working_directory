@@ -107,15 +107,16 @@ namespace School_Soft
         public Student_Table mtdSearchUser(string searchUser) //Method checks if entered details are in SQL DB
         {
             int SearchOk = 0; //variable to allow list to fill when valid search found
-         // List<Student_Table> UserDetails = new List<School_Soft.Student_Table>();
+                              // List<Student_Table> UserDetails = new List<School_Soft.Student_Table>();
+            studentlist.Clear();
             foreach (var user in dbEntitiesCourses.Student_Table )
             {
                
-                studentlist.Clear();
+               
                 if (searchUser == user.UserID || searchUser== user.Course_ID )
                 {
                     studentlist.Add (user);
-                    dataGridsearch.ItemsSource = studentlist.DefaultIfEmpty();
+                 //   dataGridsearch.ItemsSource = studentlist.DefaultIfEmpty();
                     SearchOk = 1;
                 }
              

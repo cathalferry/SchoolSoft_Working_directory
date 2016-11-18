@@ -49,7 +49,7 @@
         <Label x:Name="lblSearch" Content="Search:" HorizontalAlignment="Left" Margin="40,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="80" FontWeight="Bold" FontSize="14.667"/>
         <Label x:Name="lblRecords" Content="Records:" HorizontalAlignment="Left" Margin="40,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="80" FontWeight="Bold" FontSize="14.667"/>
         <Label x:Name="lblinfoSearch" Content="                  Search Student Records" HorizontalAlignment="Center" Margin="0,10,117.667,10" Width="276" FontWeight="Bold" Grid.ColumnSpan="3" Grid.Column="1" FontSize="14.667"/>
-        <TextBox x:Name="tbxSearch"  ToolTip=" Please enter search term, Student ID or Course ID" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="44.5,11,0,0" Grid.Row="1" Grid.ColumnSpan="3" Grid.Column="1" BorderThickness="3" FontSize="14.667">
+        <TextBox x:Name="tbxSearch"  ToolTip=" Please enter search term, Student ID or Course ID" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" Margin="44.5,11,0,0" Grid.Row="1" Grid.ColumnSpan="3" Grid.Column="1" BorderThickness="3" FontSize="14.667">
             <TextBox.Effect>
                 <DropShadowEffect/>
             </TextBox.Effect>
