@@ -33,7 +33,7 @@ Loaded
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Button x:Name="btnExit" FontWeight="Bold"  Content="Exit" Margin="26,30,20,0" Grid.Row="1" VerticalAlignment="Top"  Height="25" Click="btnExit_Click" ToolTip="Exit SchoolSoft Application" BorderThickness="2">
+        <Button x:Name="btnExit" FontWeight="Bold"  Content="Exit" Margin="26,30,0,0" Grid.Row="1" VerticalAlignment="Top"  Height="25" Click="btnExit_Click" ToolTip="Exit SchoolSoft Application" BorderThickness="2" HorizontalAlignment="Left" Width="100">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>

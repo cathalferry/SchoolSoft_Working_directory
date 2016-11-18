@@ -318,10 +318,17 @@
       <DependentUpon>SS_UPADATED.edmx</DependentUpon>
       <LastGenOutput>SS_UPADATED.Context.cs</LastGenOutput>
     </Content>
+    <Content Include="SS_UPADATED.mdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="SS_UPADATED.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>SS_UPADATED.edmx</DependentUpon>
       <LastGenOutput>SS_UPADATED.cs</LastGenOutput>
+    </Content>
+    <Content Include="SS_UPADATED_log.ldf">
+      <DependentUpon>SS_UPADATED.mdf</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Updated_Tables.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
